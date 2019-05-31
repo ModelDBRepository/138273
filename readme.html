@@ -1,0 +1,637 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="readme_files/filelist.xml">
+<link rel=Edit-Time-Data href="readme_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>NeuroMorphology is a MATLAB based application, which simulate morphology
+of spinal motoneuron of neonatal rat in the three dim</title>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="place"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="PlaceType"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="PlaceName"/>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Konstantin Ostroumov</o:Author>
+  <o:LastAuthor>Kostya</o:LastAuthor>
+  <o:Revision>10</o:Revision>
+  <o:TotalTime>816</o:TotalTime>
+  <o:Created>2005-06-05T21:00:00Z</o:Created>
+  <o:LastSaved>2006-12-11T20:25:00Z</o:LastSaved>
+  <o:Pages>2</o:Pages>
+  <o:Words>1130</o:Words>
+  <o:Characters>6446</o:Characters>
+  <o:Lines>53</o:Lines>
+  <o:Paragraphs>15</o:Paragraphs>
+  <o:CharactersWithSpaces>7561</o:CharactersWithSpaces>
+  <o:Version>11.5207</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>BestFit</w:Zoom>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]--><!--[if !mso]><object
+ classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif]-->
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:Arial;
+	mso-font-kerning:16.0pt;}
+h2
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-style:italic;}
+h3
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:13.0pt;
+	font-family:Arial;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:1542400338;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-608507314 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l0:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="3074"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:36.0pt'>
+
+<div class=Section1>
+
+<h1 align=center style='text-align:center'>Motoneuron-Morphology</h1>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%'>Motoneuron-Morphology is a MATLAB
+based application, which simulates morphology of spinal motoneurons of the
+neonatal rat in the three dimensional space on the basis of experimental
+observations. Passive electrical properties and densities of three main
+voltage-activated (sodium and two potassium) channels can be selected for
+entire motoneuron or its sections. Subsequent application of the NEURON code
+for simulating the electrical properties of the modeled motoneuron is possible.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><o:p>&nbsp;</o:p></p>
+
+<h2>Technical notes</h2>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%'>Since NeuroMorphology was written as
+a MATLAB graphical user interface (GUI), it can only be run with MATLAB 6.5 (or
+later). MATLAB documentation and license information can be found on the <a
+href="http://www.mathworks.com/products/matlab/">MATLAB home page</a>. NEURON
+version 5.7.71 was freely downloaded from <a
+href="http://www.neuron.yale.edu/neuron/">NEURON home page</a> at <st1:place
+w:st="on"><st1:PlaceName w:st="on">Yale</st1:PlaceName> <st1:PlaceType w:st="on">University</st1:PlaceType></st1:place>
+and used for electrical simulation of modeled motoneuron. NEURON documentation
+if necessary can be found at the same site.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><o:p>&nbsp;</o:p></p>
+
+<h2>Downloading and running of NeuroMorphology</h2>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%'>NeuroMorphology can be downloaded
+from this site as a <i>NeuroMorph.zip</i> archive containing the following
+eight MATLAB files and one folder (<i>neuron</i>) with additional six NEURON
+files:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;line-height:150%;mso-list:l0 level1 lfo2;tab-stops:list 36.0pt'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:150%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol;mso-bidi-font-style:italic'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><i><span style='font-size:14.0pt;line-height:
+150%'>axon.m</span></i><span style='font-size:14.0pt;line-height:150%'> –
+M-file contains <i>axon</i> function which builds axon hillock, initial segment
+and axon proper with default or user defined lengths and diameters;<i><o:p></o:p></i></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;line-height:150%;mso-list:l0 level1 lfo2;tab-stops:list 36.0pt'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:150%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol;mso-bidi-font-style:italic'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><i><span style='font-size:14.0pt;line-height:
+150%'>dendrites.m</span></i><span style='font-size:14.0pt;line-height:150%'> –
+M-file contains <i>dendrites</i> function which simulates the dendritic tree of
+the motoneuron on the basis of stochastic variations of dendritic tree
+dimensions in the default or user defined boundaries;<i><o:p></o:p></i></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;line-height:150%;mso-list:l0 level1 lfo2;tab-stops:list 36.0pt'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:150%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol;mso-bidi-font-style:italic'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><i><span style='font-size:14.0pt;line-height:
+150%'>dendrogram</span></i><span style='font-size:14.0pt;line-height:150%'>.<i>m</i>
+– M-file contains <i>dendrogram</i> function which calculates relative
+complexity and builds a dendrogram of modeled motoneuron;<i><o:p></o:p></i></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;line-height:150%;mso-list:l0 level1 lfo2;tab-stops:list 36.0pt'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:150%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol;mso-bidi-font-style:italic'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><i><span style='font-size:14.0pt;line-height:
+150%'>NeuroMorphology.fig</span></i><span style='font-size:14.0pt;line-height:
+150%'> – file contains a complete description of the NeuroMorphology GUI figure
+layout and its components. This GUI should be selected from the MATLAB Open
+Existing GUI dialog (enter GUIDE at the MATLAB prompt);<i><o:p></o:p></i></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;line-height:150%;mso-list:l0 level1 lfo2;tab-stops:list 36.0pt'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:150%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol;mso-bidi-font-style:italic'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><i><span style='font-size:14.0pt;line-height:
+150%'>NeuroMorphology</span></i><span style='font-size:14.0pt;line-height:150%'>.<i>m</i>
+– M-file that contains the code that controls the NeuroMorphology GUI,
+including the callbacks for its components;<i><o:p></o:p></i></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;line-height:150%;mso-list:l0 level1 lfo2;tab-stops:list 36.0pt'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:150%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol;mso-bidi-font-style:italic'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><i><span style='font-size:14.0pt;line-height:
+150%'>soma.m</span></i><span style='font-size:14.0pt;line-height:150%'> –
+M-file is responsible for creating the soma as a prolate spheroid with the
+default or user defined dimensions;<i><o:p></o:p></i></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;line-height:150%;mso-list:l0 level1 lfo2;tab-stops:list 36.0pt'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:150%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol;mso-bidi-font-style:italic'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><i><span style='font-size:14.0pt;line-height:
+150%'>To_NEURON.fig</span></i><span style='font-size:14.0pt;line-height:150%'>
+– file contains a complete description of the To_NEURON GUI figure layout and
+its components. To_NEURON GIU is loaded from the NeuroMorphology interface
+after clicking on the NEURON button;<i><o:p></o:p></i></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;line-height:150%;mso-list:l0 level1 lfo2;tab-stops:list 36.0pt'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:150%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol;mso-bidi-font-style:italic'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><i><span style='font-size:14.0pt;line-height:
+150%'>To_NEURON</span></i><span style='font-size:14.0pt;line-height:150%'>.<i>m
+</i>– M-file that contains the code that controls the To_NEURON GUI and its
+callbacks;<i><o:p></o:p></i></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;line-height:150%;mso-list:l0 level1 lfo2;tab-stops:list 36.0pt'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:150%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol;mso-bidi-font-style:italic'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><i><span style='font-size:14.0pt;line-height:
+150%'>neuron/electrical.hoc</span></i><span style='font-size:14.0pt;line-height:
+150%'> – file contains set of commands which should be loaded to NEURON to
+define electrical properties of modeled motoneuron;<i><o:p></o:p></i></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;line-height:150%;mso-list:l0 level1 lfo2;tab-stops:list 36.0pt'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:150%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol;mso-bidi-font-style:italic'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><i><span style='font-size:14.0pt;line-height:
+150%'>neuron/IKaSM.mod</span></i><span style='font-size:14.0pt;line-height:
+150%'> – file contains description of the potassium fast (<i>K<sub>A</sub></i>)<i>
+</i>current specific for spinal motoneurons which was used for our simulation
+(see Safronov <i>et al.,</i> 2000);<i><o:p></o:p></i></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;line-height:150%;mso-list:l0 level1 lfo2;tab-stops:list 36.0pt'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:150%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol;mso-bidi-font-style:italic'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><i><span style='font-size:14.0pt;line-height:
+150%'>neuron/IKdrSM.mod</span></i><span style='font-size:14.0pt;line-height:
+150%'> – file contains description of the potassium delayed rectifier (<i>K<sub>DR</sub></i>)<i>
+</i>current expressed in the spinal motoneurons which was used for our
+simulation (see Safronov <i>et al.,</i> 2000);<i><o:p></o:p></i></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;line-height:150%;mso-list:l0 level1 lfo2;tab-stops:list 36.0pt'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:150%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol;mso-bidi-font-style:italic'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><i><span style='font-size:14.0pt;line-height:
+150%'>neuron/INaSM.mod</span></i><span style='font-size:14.0pt;line-height:
+150%'> – file contains description of the sodium current specific for spinal
+motoneurons which was used for our simulation (see Safronov <i>et al.,</i>
+2000);<i><o:p></o:p></i></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;line-height:150%;mso-list:l0 level1 lfo2;tab-stops:list 36.0pt'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:150%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol;mso-bidi-font-style:italic'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><i><span style='font-size:14.0pt;line-height:
+150%'>neuron/motoneuron</span></i><span style='font-size:14.0pt;line-height:
+150%'>.<i>hoc</i> – file contains set of commands which produce loading of the
+modeled motoneuron’s morphology into the NEURON;<i><o:p></o:p></i></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;line-height:150%;mso-list:l0 level1 lfo2;tab-stops:list 36.0pt'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:150%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol;mso-bidi-font-style:italic'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><i><span style='font-size:14.0pt;line-height:
+150%'>neuron/nrnmech</span></i><span style='font-size:14.0pt;line-height:150%'>.<i>dll</i>
+– file contains compiled mechanisms (<i>IKaSM, IKdrSM and INaSM</i>) and should
+be loaded to NEURON for simulation of voltage-dependent currents.<i><o:p></o:p></i></span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%'>Unpack <i>NeuroMorph.zip</i> archive
+into a MATLAB current directory and open <i>NeuroMorphology.fig</i> as an
+Existing GUI using MATLAB standard procedure. Briefly, to open NeuroMorphology
+enter GUIDE at the MATLAB prompt, go to the GUIDE Open Existing GUI dialog and
+open <i>NeuroMorphology.fig</i>. After opening the GUI, you can run it by
+selecting <b>Run</b> from the <b>Tools</b> menu or clicking the <b>Run</b>
+button on the GUIDE toolbar. If the directory where you unpack the <i>NeuroMorph.zip</i>
+is not on the MATLAB path change the current working directory to the directory
+containing <i>NeuroMorphology.fig</i> or add that directory to the MATLAB path.</span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><o:p>&nbsp;</o:p></p>
+
+<h2>Using NeuroMorphology (an example)</h2>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%'>After running the NeuroMorphology its
+graphical user interface will appear.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%'>Picture below briefly introduces main
+parts of the interface</span>.</p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:10in;
+ height:479.25pt'>
+ <v:imagedata src="readme_files/image001.gif" o:title="ModelMain"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=960 height=639
+src="readme_files/image002.jpg" v:shapes="_x0000_i1025"><![endif]></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%'>Let’s leave all the parameters as
+they are and just click on the <b style='mso-bidi-font-weight:normal'>Start</b>
+button. Relative complexity graph and dendrogram would appear in the main
+window. Plus additional window with 3D neuron representation should become
+visible. MATLAB provides a set of useful tools to rotate, zoom in/out and save
+the 3D image.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%'><!--[if gte vml 1]><v:shape id="_x0000_i1026"
+ type="#_x0000_t75" style='width:730.5pt;height:424.5pt'>
+ <v:imagedata src="readme_files/image003.gif" o:title="ModelAfterStart"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=974 height=566
+src="readme_files/image003.gif" v:shapes="_x0000_i1026"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%'>To get numerical values describing
+simulated neuron click the <b style='mso-bidi-font-weight:normal'>Report</b>
+button on the main panel. The <i style='mso-bidi-font-style:normal'>Report</i>
+file will appear in the MATLAB current directory. Sometimes it can be useful to
+save current setting (dimensions) in the separate file to compare different
+results or analyze data. To do so, click on the <b style='mso-bidi-font-weight:
+normal'>Setting</b> button (after clicking <i style='mso-bidi-font-style:normal'>Settings</i>
+file will appear in the MATLAB current directory). For abbreviations and terms
+see <a href="Glossary.html" target=Frame1>Glossary</a>.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%'><!--[if gte vml 1]><v:shape id="_x0000_i1027"
+ type="#_x0000_t75" style='width:654.75pt;height:307.5pt'>
+ <v:imagedata src="readme_files/image004.gif" o:title="Report and Settings"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=873 height=410
+src="readme_files/image005.jpg" v:shapes="_x0000_i1027"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%'>If we are satisfied with the
+simulated neuron in terms of its morphology, let’s try to introduce distributed
+voltage-dependent currents. Click on the <b style='mso-bidi-font-weight:normal'>NEURON</b>
+button on the main window. To_NEURON dialog will appear. The following picture
+describes this dialog window.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%'><!--[if gte vml 1]><v:shape id="_x0000_i1028"
+ type="#_x0000_t75" style='width:630pt;height:423.75pt'>
+ <v:imagedata src="readme_files/image006.gif" o:title="To_Neuron_Full"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=840 height=565
+src="readme_files/image007.jpg" v:shapes="_x0000_i1028"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%'>At this point we would like to change
+<i style='mso-bidi-font-style:normal'>Na<sup>+</sup>, Ka </i>and <i
+style='mso-bidi-font-style:normal'>Kdr</i> conductances to certain values.
+After doing this To_NEURON dialog window should look like the following:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%'><!--[if gte vml 1]><v:shape id="_x0000_i1029"
+ type="#_x0000_t75" style='width:574.5pt;height:264.75pt'>
+ <v:imagedata src="readme_files/image008.jpg" o:title="To_Neuron_Filled"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=766 height=353
+src="readme_files/image008.jpg" v:shapes="_x0000_i1029"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%'>Click on the <b style='mso-bidi-font-weight:
+normal'>Generate NEURON code</b> button to prepare data for electrical
+simulation. Now all the data are transformed to the code for further use with
+the NEURON simulator and saved in the MATLAB current directory’s folder <i
+style='mso-bidi-font-style:normal'>neuron</i> (if you unpack the
+NeuroMorphology archive rather than the MATLAB current directory, it is useful
+to copy all six NEURON files to the folder <i style='mso-bidi-font-style:normal'>neuron</i>
+now).<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%'><!--[if gte vml 1]><v:shape id="_x0000_i1030"
+ type="#_x0000_t75" style='width:407.25pt;height:339.75pt'>
+ <v:imagedata src="readme_files/image009.gif" o:title="neuronfolder"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=543 height=453
+src="readme_files/image009.gif" v:shapes="_x0000_i1030"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%'>Files with <i style='mso-bidi-font-style:
+normal'>.dat</i> extension are created by NeuroMorphology, their names indicate
+their content.<o:p></o:p></span></p>
+
+<h2>NeuroMorphology and NEURON<span style='font-style:normal;mso-bidi-font-style:
+italic'><o:p></o:p></span></h2>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:14.0pt;
+line-height:150%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%'>First of all, change the NEURON working
+directory to the <i style='mso-bidi-font-style:normal'>neuron</i> folder in the
+MATLAB working directory (it may be useful to copy simulation results to some
+another directory if you are going to create a network or something like this).
+If NEURON was installed properly, it should detect <i style='mso-bidi-font-style:
+normal'>nrnmech.dll</i> file in this directory and load membrane “mechanism”
+from it (<i style='mso-bidi-font-style:normal'>INaSM, IKaSM</i> and <i
+style='mso-bidi-font-style:normal'>IKdrSM</i>).<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%'>Commands translating neuron
+morphology into NEURON are located in the <i style='mso-bidi-font-style:normal'>motoneuron.hoc</i>
+file. Once this file has been loaded to NEURON, it automatically reads data
+from all generated files except <i style='mso-bidi-font-style:normal'>.dat</i>
+files whose name starts with ‘tree’ (<i style='mso-bidi-font-style:normal'>tree1.dat</i>
+for example). NEURON will ask you to choose these files one by one as it shown
+here.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><i
+style='mso-bidi-font-style:normal'><span style='font-size:14.0pt;line-height:
+150%'><!--[if gte vml 1]><v:shape id="_x0000_i1031" type="#_x0000_t75" style='width:161.25pt;
+ height:204.75pt'>
+ <v:imagedata src="readme_files/image010.gif" o:title="neuronstep3"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=215 height=273
+src="readme_files/image010.gif" v:shapes="_x0000_i1031"><![endif]></span></i><span
+style='font-size:14.0pt;line-height:150%'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%'>After you finish loading morphology,
+the next step is to load electrical properties of the simulated neuron. For
+this use <i style='mso-bidi-font-style:normal'>electrical.hoc</i>. Now
+everything is ready for simulation. By default, we introduced “single pulse
+current clamp point process”</span> <span style='font-size:14.0pt;line-height:
+150%'>into the center of the soma (IClamp[0] at soma 0.5). Open the Voltage
+axis graph and the RunControl panel, then press <b style='mso-bidi-font-weight:
+normal'>Init &amp; Run<i style='mso-bidi-font-style:normal'> </i></b>button to
+see the voltage response of the simulated neuron to the current step of 0.5 nA
+amplitude applied to the center of the soma. Results and NEURONS’s panels are
+shown below. We just opened “Distributed Mechanism viewer/Shape Name/soma” to
+insure that we have correctly loaded the simulated neuron. The dimensions and
+electrical properties of the soma are the same as in the Soma report and
+To_Neuron dialog (see above).<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:14.0pt;
+line-height:150%'><!--[if gte vml 1]><v:shape id="_x0000_i1032" type="#_x0000_t75"
+ style='width:739.5pt;height:718.5pt'>
+ <v:imagedata src="readme_files/image011.gif" o:title="NeuronFull1"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=986 height=958
+src="readme_files/image011.gif" v:shapes="_x0000_i1032"><![endif]><o:p></o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

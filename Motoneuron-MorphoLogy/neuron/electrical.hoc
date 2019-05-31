@@ -1,0 +1,143 @@
+objectvar f, ndend
+f = new File()
+f.ropen("electrical.dat")
+npd=f.scanvar()
+nahc=f.scanvar()
+nisc=f.scanvar()
+napc=f.scanvar()
+
+ndend=new Vector()
+ndend.scanf(f,npd)
+
+soma {
+    insert pas
+    e_pas=f.scanvar() 
+    cm=f.scanvar() 
+    g_pas=f.scanvar() 
+    Ra=f.scanvar()
+    insert IKaSM
+    insert IKdrSM
+    insert INaSM
+    gnamax_INaSM=f.scanvar()
+    gkamax_IKaSM=f.scanvar()
+    gkdrmax_IKdrSM=f.scanvar()
+    }
+
+e_pas_prox=f.scanvar()     
+cm_prox=f.scanvar() 
+g_pas_prox=f.scanvar() 
+Ra_prox=f.scanvar() 
+gnamax_prox=f.scanvar() 
+gkamax_prox=f.scanvar() 
+gkdrmax_prox=f.scanvar() 
+e_pas_distal=f.scanvar()     
+cm_distal=f.scanvar() 
+g_pas_distal=f.scanvar() 
+Ra_distal=f.scanvar() 
+gnamax_distal=f.scanvar() 
+gkamax_distal=f.scanvar() 
+gkdrmax_distal=f.scanvar()
+e_pas_AH=f.scanvar()     
+cm_AH=f.scanvar()
+g_pas_AH=f.scanvar() 
+Ra_AH=f.scanvar() 
+gnamax_AH=f.scanvar() 
+gkamax_AH=f.scanvar() 
+gkdrmax_AH=f.scanvar()
+e_pas_IS=f.scanvar()     
+cm_IS=f.scanvar() 
+g_pas_IS=f.scanvar() 
+Ra_IS=f.scanvar() 
+gnamax_IS=f.scanvar() 
+gkamax_IS=f.scanvar() 
+gkdrmax_IS=f.scanvar()
+e_pas_proper=f.scanvar()     
+cm_proper=f.scanvar() 
+g_pas_proper=f.scanvar() 
+Ra_proper=f.scanvar() 
+gnamax_proper=f.scanvar() 
+gkamax_proper=f.scanvar() 
+gkdrmax_proper=f.scanvar()
+
+for i=0, npd-1 {
+    trees[i].dend[0] {
+    insert pas
+    e_pas=e_pas_prox
+    cm=cm_prox 
+    g_pas=g_pas_prox 
+    Ra=Ra_prox
+	insert INaSM
+	insert IKaSM
+	insert IKdrSM
+	gnamax_INaSM=gnamax_prox
+	gkamax_IKaSM=gkamax_prox
+	gkdrmax_IKdrSM=gkdrmax_prox
+    }
+}
+    
+for i=0, npd-1{
+    lim=ndend.get(i)
+    for j=1, lim-1 {
+        trees[i].dend[j] {
+        insert pas
+        e_pas=e_pas_distal 
+        cm=cm_distal 
+        g_pas=g_pas_distal 
+        Ra=Ra_distal
+	    insert INaSM
+	    insert IKaSM
+	    insert IKdrSM
+	    gnamax_INaSM=gnamax_distal
+	    gkamax_IKaSM=gkamax_distal
+	    gkdrmax_IKdrSM=gkdrmax_distal              
+        }
+    }
+}
+
+for i=0, nahc-1 {
+    axonhill[0].axonsegment[i] {
+    insert pas
+    e_pas=e_pas_AH
+    cm=cm_AH 
+    g_pas=g_pas_AH 
+    Ra=Ra_AH
+	insert INaSM
+	insert IKaSM
+	insert IKdrSM
+	gnamax_INaSM=gnamax_AH
+	gkamax_IKaSM=gkamax_AH
+	gkdrmax_IKdrSM=gkdrmax_AH
+        }
+    }
+    
+for i=0, nisc-1 {
+    initialsegments[0].isegment[i] {
+    insert pas
+    e_pas=e_pas_IS
+    cm=cm_IS 
+    g_pas=g_pas_IS 
+    Ra=Ra_IS
+	insert INaSM
+	insert IKaSM
+	insert IKdrSM
+	gnamax_INaSM=gnamax_IS
+	gkamax_IKaSM=gkamax_IS
+	gkdrmax_IKdrSM=gkdrmax_IS        
+}
+    }
+    
+for i=0, napc-1 {
+    axonpropers[0].proper[i] {
+    insert pas
+    e_pas=e_pas_proper
+    cm=cm_proper 
+    g_pas=g_pas_proper 
+    Ra=Ra_proper
+    insert INaSM
+	insert IKaSM
+	insert IKdrSM
+	gnamax_INaSM=gnamax_proper
+	gkamax_IKaSM=gkamax_proper
+	gkdrmax_IKdrSM=gkdrmax_proper
+        }
+    }

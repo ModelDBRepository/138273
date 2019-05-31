@@ -1,0 +1,3 @@
+load_file("nrngui.hoc")
+print "Matlab must be run first to generate morphologies for NEURON to use."
+print "Please see the readme for more details."

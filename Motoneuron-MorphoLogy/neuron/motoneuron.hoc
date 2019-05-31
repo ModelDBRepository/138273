@@ -1,0 +1,173 @@
+objectvar f
+f=new File()
+f.ropen("common.dat")
+create soma
+soma {
+    nseg = 1
+    diam = f.scanvar()
+    L = f.scanvar()
+    insert pas
+        g_pas = .0825
+        e_pas = -70.0           
+    }
+nstem=f.scanvar()   
+
+begintemplate tree
+public dend
+objectvar f1
+create dend[1]
+proc init() {local i, me, child1, child2
+f1=new File()
+f1.chooser("r")
+if (f1.chooser()) {
+			f1.getname()
+			f1.ropen()
+		}
+ndend=f1.scanvar()
+create dend[ndend]
+for i = 0,ndend-1 {
+	me = f1.scanvar() - 1
+	child1 = f1.scanvar() - 1
+	child2 = f1.scanvar() - 1
+
+      dend[me] {
+        nseg = 1
+        diam = f1.scanvar()
+        L = f1.scanvar()
+        pt3dclear()
+        pt3dadd(f1.scanvar(),f1.scanvar(),f1.scanvar(),diam)
+        pt3dadd(f1.scanvar(),f1.scanvar(),f1.scanvar(),diam)
+        insert pas
+        g_pas = .0001666
+        e_pas = -70.0
+    
+        if (child1 >= 0) {
+          connect dend[child1](0), 1
+        }
+        if (child2 >= 0) {
+          connect dend[child2](0), 1
+        }
+      }
+      }
+}
+endtemplate tree
+
+objectvar trees[nstem]
+for i=0, nstem-1 {
+trees[i]=new tree()
+connect trees[i].dend[0](0),soma(0)}
+
+begintemplate axonhillock
+public axonsegment, naxonsegment
+objectvar f2
+create axonsegment[1]
+proc init() {local i, me, child1, child2
+    f2=new File()
+    f2.ropen("axonhillock.dat")
+    naxonsegment=f2.scanvar()
+    create axonsegment[naxonsegment]
+    for i = 0,naxonsegment-1 {
+	me = f2.scanvar() - 1
+	child1 = f2.scanvar() - 1
+
+      axonsegment[me] {
+        nseg = 1
+        diam = f2.scanvar()
+        L = f2.scanvar()
+        pt3dclear()
+        pt3dadd(f2.scanvar(),f2.scanvar(),f2.scanvar(),diam)
+        pt3dadd(f2.scanvar(),f2.scanvar(),f2.scanvar(),diam)    
+        insert pas
+        g_pas = .0825
+        e_pas = -70.0
+        if (child1 >= 0) {
+          connect axonsegment[child1](0), 1
+        }
+      }
+      }
+}
+endtemplate axonhillock
+
+begintemplate initialsegment
+public isegment, nis
+objectvar f3
+create isegment[1]
+proc init() {local i, me, child1, child2
+f3=new File()
+f3.ropen("initialsegment.dat")
+nis=f3.scanvar()
+create isegment[nis]
+for i = 0,nis-1 {
+	me = f3.scanvar() - 1
+	child1 = f3.scanvar() - 1
+
+      isegment[me] {
+        nseg = 1
+        diam = f3.scanvar()
+        L = f3.scanvar()
+        pt3dclear()
+        pt3dadd(f3.scanvar(),f3.scanvar(),f3.scanvar(),diam)
+        pt3dadd(f3.scanvar(),f3.scanvar(),f3.scanvar(),diam)
+        insert pas
+        g_pas = .0825
+        e_pas = -70.0
+    
+        if (child1 >= 0) {
+          connect isegment[child1](0), 1
+        }
+      }
+      }
+}
+endtemplate initialsegment
+
+begintemplate axonproper
+public proper
+objectvar f4
+create proper[1]
+proc init() {local i, me, child1, child2
+f4=new File()
+f4.ropen("axonproper.dat")
+nis=f4.scanvar()
+create proper[nis]
+for i = 0,nis-1 {
+	me = f4.scanvar() - 1
+	child1 = f4.scanvar() - 1
+
+      proper[me] {
+        nseg = 1
+        diam = f4.scanvar()
+        L = f4.scanvar()
+        pt3dclear()
+        pt3dadd(f4.scanvar(),f4.scanvar(),f4.scanvar(),diam)
+        pt3dadd(f4.scanvar(),f4.scanvar(),f4.scanvar(),diam)
+        insert pas
+        g_pas = .0825
+        e_pas = -70.0
+    
+        if (child1 >= 0) {
+          connect proper[child1](0), 1
+        }
+      }
+      }
+}
+endtemplate axonproper
+
+objectvar axonhill[1]
+axonhill=new axonhillock()
+soma connect axonhill.axonsegment[0](0),(1)
+
+objectvar initialsegments[1]
+initialsegments=new initialsegment()
+axonhill[0].axonsegment[axonhill.naxonsegment-1] connect initialsegments[0].isegment[0](0), 1
+
+objectvar axonpropers[1]
+axonpropers=new axonproper()
+initialsegments[0].isegment[initialsegments.nis-1] connect axonpropers[0].proper[0](0), 1
+
+access soma
+objectvar stim
+stim=new IClamp(0.5)
+stim.del=100
+stim.amp=0
+stim.dur=100
+tstop=300        
